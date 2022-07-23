@@ -239,7 +239,7 @@ function remove_deb() {
         if [ "${STATUS}" == "deinstall ok config-files" ]; then
             REMOVE="purge"
         fi
-        ${ELEVATE} nala -y --autoremove ${REMOVE} "${APP}"
+        ${ELEVATE} nala remove -y --autoremove ${REMOVE} "${APP}"
     else
         fancy_message info "${APP} is not installed."
     fi
