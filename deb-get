@@ -143,11 +143,11 @@ function eula() {
 }
 
 function update_apt() {
-    ${ELEVATE} nala -o Dpkg::Progress-Fancy="1" -y update
+    ${ELEVATE} nala update -o Dpkg::Progress-Fancy="1" -y
 }
 
 function upgrade_apt() {
-    ${ELEVATE} nala -o Dpkg::Progress-Fancy="1" -y upgrade
+    ${ELEVATE} nala -y upgrade -o Dpkg::Progress-Fancy="1"
 }
 
 function install_apt() {
